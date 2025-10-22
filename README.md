@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+🩸 Cycle Tracker (Çok Kullanıcılı Döngü Takip Uygulaması)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu proje, React ve Tailwind CSS kullanılarak geliştirilmiş, kadınların regl döngülerini ve tahminlerini kişiselleştirilmiş olarak takip etmelerini sağlayan tam fonksiyonlu bir uygulamadır. Tüm veriler, her kullanıcı için ayrı ve güvenli bir şekilde Google Firestore veritabanında saklanmaktadır.
 
-## Available Scripts
+Canlı Versiyon (Live Demo)
 
-In the project directory, you can run:
+Uygulamanın çalışan versiyonuna aşağıdaki linkten ulaşabilirsiniz:
+[Cycle Tracker Uygulaması] [\[DEMO LİNK\]](https://cycle-tracker-gules.vercel.app/)
 
-### `npm start`
+💻 Teknolojiler
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React (TypeScript): Kullanıcı arayüzü (UI) ve state yönetimi için
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Tailwind CSS: Hızlı ve modern arayüz tasarımı için
 
-### `npm test`
+Firebase/Firestore: Çok kullanıcılı, gerçek zamanlı veri depolama ve senkronizasyon için
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Firebase Auth: Kullanıcıya özel veri izolasyonu (otomatik oturum açma ile)
 
-### `npm run build`
+Vercel: Kolay ve hızlı deployment (yayına alma) platformu
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🚀 Başlangıç
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Bu projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ön Koşullar
 
-### `npm run eject`
+Node.js (LTS sürümü önerilir)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+npm veya yarn
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Bir Firebase Projesi (Firestore ve Authentication aktif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Kurulum Adımları
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Projeyi Klonlayın:
 
-## Learn More
+git clone [REPO_ADRESİNİZ]
+cd cycle-tracker
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bağımlılıkları yükleyin:
+
+npm install
+
+
+Firebase Konfigürasyonu:
+Bu uygulama, özel bir Canvas ortamında çalışmak üzere tasarlandığı için standart .env dosyası kullanmaz. Yerel çalıştırmak için:
+
+Kendi Firebase ayarlarınızı (apiKey, projectId vb.) alın.
+
+src/App.tsx dosyasında, global değişkenlerin kullanıldığı Firebase başlatma bloğunu kendi standart konfigürasyonunuzla değiştirin.
+
+Uygulamayı başlatın:
+
+npm start
+
+
+Uygulama http://localhost:3000 adresinde açılacaktır.
+
+📝 Özellikler
+
+Kişiye Özel Veri: Her kullanıcının döngü ayarları ve kayıtları Firestore'da kendi userId'si altında izole edilir.
+
+Tahmin Hesaplama: Kayıtlı verilere göre bir sonraki regl başlangıcı, yumurtlama günü ve doğurgan pencere tarihleri hesaplanır.
+
+Kalıcı Kayıt: Girilen tüm döngü başlangıç tarihleri ve ayarlar, veritabanında kalıcı olarak saklanır.
+
+CRUD Yeteneği: Regl başlangıç tarihleri kaydedilebilir ve silinebilir.
